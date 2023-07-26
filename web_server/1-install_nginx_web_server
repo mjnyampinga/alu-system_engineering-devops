@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 # installs nginx and configure it to listen on port 80
-# Update the package list
-apt-get update
 
-# Install Nginx without user interaction (assume yes to prompts)
+# Update the package list and install Nginx without user interaction (assume yes to prompts)
+apt-get update
 apt-get install -y nginx
 
 # Configure Nginx to listen on port 80 and serve a custom page
