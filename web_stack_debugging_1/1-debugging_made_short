@@ -1,5 +1,6 @@
-   #!/usr/bin/env bash
-   service nginx start
-   sed -i 's/80 default_server/8080 default_server/g' /etc/nginx/sites-available/default
- sed -i '/listen \[::\]:80 default_server/ s/80 default_server/8080 default_server/g' /etc/nginx/sites-available/default
-  service nginx reload
+#!/usr/bin/env bash
+#Sets nginx for listening to 80 port
+service nginx start
+sed -i 's/80 default_server/8080 default_server/g' /etc/nginx/sites-available/default
+sed -i '/listen \[::\]:80 default_server/ s/80 default_server/8080 default_server/g' /etc/nginx/sites-available/default
+service nginx reload
